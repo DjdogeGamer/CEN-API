@@ -12,7 +12,7 @@ const S3Util = new S3UtilAPI(bucketName, accessKeyId, secretAccessKey);
 
 app.get('/', (req, res) => {
     res.send('CEN-API is running.');
-} );
+});
 
 app.get('/query', (req, res) => {
     const sqlQuery = req.query.sqlQuery;

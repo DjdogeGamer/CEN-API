@@ -8,6 +8,8 @@ const fileName = 'db.sqlite';
 const accessKeyId = 'AKIA4ZDOYH5F6H3ASIGQ';
 const secretAccessKey = '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';
 
+const port = process.env.port || 3000;
+
 const S3Util = new S3UtilAPI(bucketName, accessKeyId, secretAccessKey);
 
 app.get('/', (req, res) => {
@@ -29,6 +31,6 @@ app.get('/asset', (req, res) => {
     });
 });
 
-app.listen(3000, () => {
-    console.log('Server listening on port 3000.');
+app.listen(port, () => {
+    console.log('Server listening on port: ' + port);
 });

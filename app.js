@@ -31,6 +31,6 @@ app.get('/asset', (req, res) => {
     });
 });
 
-app.listen(PORT, () => {
+app.listen(8080, () => {
     console.log('Server listening on port: ' + PORT);
 });

@@ -37,7 +37,7 @@ env:
   ECS_CLUSTER: arn:aws:ecs:eu-west-2:878553087819:cluster/cen-api-cluster              # set this to your Amazon ECS cluster name
   ECS_TASK_DEFINITION: cen-api-task-definition # set this to the path to your Amazon ECS task definition
                                                # file, e.g. .aws/task-definition.json
-  CONTAINER_NAME: cen-api-container        # set this to the name of the container in the
+  CONTAINER_NAME: cen-api-container       # set this to the name of the container in the
                                                # containerDefinitions section of your task definition
 
 permissions:

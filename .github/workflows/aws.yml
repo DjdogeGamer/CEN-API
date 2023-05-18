@@ -15,8 +15,8 @@ on:
       - master
 
 env:
-  AWS_REGION: us-east-1                   # set this to your preferred AWS region, e.g. us-west-1
-  ECR_REPOSITORY: cen-api-repository           # set this to your Amazon ECR repository name
+  AWS_REGION: eu-west-2                   # set this to your preferred AWS region, e.g. us-west-1
+  ECR_REPOSITORY: public.ecr.aws/g5o7h4a8/cen-api-repository           # set this to your Amazon ECR repository name
   ECS_SERVICE: cen-api-service                 # set this to your Amazon ECS service name
   ECS_CLUSTER: arn:aws:ecs:eu-west-2:878553087819:cluster/cen-api-cluster  # set this to your Amazon ECS cluster name
   ECS_TASK_DEFINITION: .aws/cen-api-task-definition.json # set this to the path to your Amazon ECS task definition

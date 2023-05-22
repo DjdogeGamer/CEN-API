@@ -1,21 +1,25 @@
-# from base image node
-FROM node:8.11-slim
+# Use a imagem base do Windows Server Core
+FROM node:latest
 
-RUN mkdir -p /usr/src/app
-WORKDIR /usr/src/app
+# Crie o diretório de trabalho
+WORKDIR /app
 
-# copying all the files from your file system to container file system
+# Copie o package.json e o package-lock.json (se houver)
 COPY package.json .
+COPY package-lock.json .
 
-# install all dependencies and set LD_LIBRARY_PATH temporarily
-RUN export LD_LIBRARY_PATH="/usr/local/lib64/:$LD_LIBRARY_PATH"
+# Defina a variável de ambiente LD_LIBRARY_PATH temporariamente
+ENV LD_LIBRARY_PATH="/usr/local/lib64/:$LD_LIBRARY_PATH"
+
+# Instale as dependências
 RUN npm install
 
-# copy other files as well
-COPY ./ .
+# Copie o restante dos arquivos do projeto
+COPY . .
 
-# expose the port
+# Exponha a porta que a aplicação utiliza
 EXPOSE 3000
 
-# command to run when instantiating an image
+# Comando para executar a aplicação
 CMD ["npm", "start"]
+

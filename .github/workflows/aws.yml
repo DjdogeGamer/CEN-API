@@ -47,7 +47,7 @@ jobs:
           # ser implantada no ECS.
           docker build -t ${{ env.ECR_REGISTRY }}/${{ env.ECR_REPOSITORY }}:${{ github.sha }} .
           docker push ${{ env.ECR_REGISTRY }}/${{ env.ECR_REPOSITORY }}:${{ github.sha }}
-          echo "::set-env name=IMAGE_NAME::${{ env.ECR_REGISTRY }}/${{ env.ECR_REPOSITORY }}:${{ github.sha }}"
+          echo "ACTIONS_ALLOW_UNSECURE_COMMANDS=true ::set-env name=IMAGE_NAME::${{ env.ECR_REGISTRY }}/${{ env.ECR_REPOSITORY }}:${{ github.sha }}"
 
 
       - name: Download Task Definition

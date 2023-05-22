@@ -8,9 +8,6 @@ WORKDIR /app
 COPY package.json .
 COPY package-lock.json .
 
-# Defina a variável de ambiente LD_LIBRARY_PATH temporariamente
-ENV LD_LIBRARY_PATH="/usr/local/lib64/:$LD_LIBRARY_PATH"
-
 # Instale as dependências
 RUN npm install
 

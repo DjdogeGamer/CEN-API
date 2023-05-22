@@ -1,5 +1,5 @@
-# Use a imagem base do Windows Server Core
-FROM node:14
+# Use a imagem do ECR
+FROM 878553087819.dkr.ecr.eu-west-1.amazonaws.com/cen-api-repository-windows:latest
 
 # Crie o diretório de trabalho
 WORKDIR /app

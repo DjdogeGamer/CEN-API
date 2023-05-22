@@ -8,8 +8,8 @@ WORKDIR /usr/src/app
 COPY package.json .
 
 # install all dependencies and set LD_LIBRARY_PATH temporarily
-RUN export LD_LIBRARY_PATH="/usr/local/lib64/:$LD_LIBRARY_PATH" && \
-    npm install
+RUN export LD_LIBRARY_PATH="/usr/local/lib64/:$LD_LIBRARY_PATH"
+RUN npm install
 
 # copy other files as well
 COPY ./ .

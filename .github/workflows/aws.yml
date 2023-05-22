@@ -39,15 +39,24 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v1
 
-      - name: Build, tag, and push image to Amazon ECR
+      - name: Build and push image to Amazon ECR
         id: build-image
         run: |
-          # Construa uma imagem docker e
-          # envie-a para o ECR para que possa
-          # ser implantada no ECS.
-          docker build -t ${{ env.ECR_REGISTRY }}/${{ env.ECR_REPOSITORY }}:${{ github.sha }} .
+          # Construa uma imagem docker usando o arquivo de manifesto Docker
+          docker build -t my-image -f Dockerfile .
+
+          # Configure o repositório ECR
+          aws ecr get-login-password --region ${{ env.AWS_REGION }} | docker login --username AWS --password-stdin ${{ env.ECR_REGISTRY }}
+
+          # Marque a imagem com a tag adequada
+          docker tag my-image:latest ${{ env.ECR_REGISTRY }}/${{ env.ECR_REPOSITORY }}:${{ github.sha }}
+
+          # Envie a imagem para o ECR
           docker push ${{ env.ECR_REGISTRY }}/${{ env.ECR_REPOSITORY }}:${{ github.sha }}
-          echo "ACTIONS_ALLOW_UNSECURE_COMMANDS=true ::set-env name=IMAGE_NAME::${{ env.ECR_REGISTRY }}/${{ env.ECR_REPOSITORY }}:${{ github.sha }}"
+
+          # Defina a variável de ambiente com o nome da imagem
+          echo "IMAGE_NAME=${{ env.ECR_REGISTRY }}/${{ env.ECR_REPOSITORY }}:${{ github.sha }}" >> $GITHUB_ENV
+
 
       - name: Download Task Definition
         run: |

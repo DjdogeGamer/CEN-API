@@ -1,5 +1,5 @@
 # Use a imagem base do Windows Server Core
-FROM node:latest
+FROM node:14
 
 # Crie o diretório de trabalho
 WORKDIR /app

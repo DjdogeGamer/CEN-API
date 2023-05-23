@@ -1,5 +1,5 @@
 # Use a imagem do ECR
-FROM mcr.microsoft.com/windows/nanoserver:1909
+FROM mcr.microsoft.com/windows/servercore:ltsc2019
 
 # Crie o diretório de trabalho
 WORKDIR /app

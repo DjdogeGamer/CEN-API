@@ -1,5 +1,5 @@
 # Use a imagem do ECR
-FROM node:latest
+FROM node:14
 
 # Crie o diretório de trabalho
 WORKDIR /app

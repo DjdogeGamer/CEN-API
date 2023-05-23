@@ -1,5 +1,5 @@
 # Use a imagem do ECR
-FROM node:14
+FROM mcr.microsoft.com/windows/nanoserver:1909
 
 # Crie o diretório de trabalho
 WORKDIR /app

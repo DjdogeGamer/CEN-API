@@ -77,7 +77,7 @@ gcloud auth login
 2. Faça login no projeto:
 
 ```bash
-gcloud config set project cen-api-319618
+gcloud config set project cryptic-tower-387601
 ```
 
 3. Faça o deploy da API:

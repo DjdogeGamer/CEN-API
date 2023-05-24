@@ -1,4 +1,4 @@
-# API Install Instructions Documentation | Instruções da API para instalação
+# API Install Instructions Documentation | Instruções da API para instalação   
 
 ## API URL | URL da API
 
@@ -6,7 +6,8 @@
 
 ## Requirements | Requisitos
 
-- Node.js (versão 18.16.0 or superior)
+- Node Version Manager - NVM (optional)
+- Node.js (18.16.0 or superior)
 - Docker (optional)
 
 ## Instalation | Instalação
@@ -59,11 +60,12 @@ docker build -t cen-api .
 docker run -d -p 3000:3000 cen-api
 ```
 
-3. Acesse a API em `http://localhost:3000`.
+3. Access in | Acesse Em `http://localhost:3000`.
 
 ## Deployment | Implantação
 
-A API está hospedada no Google Cloud Platform (GCP) e pode ser acessada em:
+A API está hospedada no Google Cloud Platform (GCP) e pode ser acessada em:   
+The API is hosted at Google Cloud Platform (GCP) and it can be accessed in:   
 
 * https://cen-api.nw.r.appspot.com
 
@@ -89,20 +91,16 @@ gcloud app deploy
 
 ## Endpoints
 
-Endpoints disponíveis | Available endpoints:
+Available endpoints | Endpoints disponíveis:
 
-- `GET /query?sqlQuery=YOUR_SQL_QUERY&fileName=db.sqlite`: Executa uma query no banco de dados e retorna o resultado em
-  um arquivo JSON | Execute a query in the database and return the result in a JSON file.
+- `GET /query?sqlQuery=YOUR_SQL_QUERY&fileName=db.sqlite`: Executa uma query no banco de dados e retorna o resultado em um arquivo JSON | Execute a query in the database and return the result in a JSON file.
 
 - `GET /asset?fileName=filename.extension`: Retorna um arquivo de mídia | Returns a media file.
 
 ## Contributing | Contribuindo
 
-Se você encontrar algum problema ou tiver alguma sugestão de melhoria, sinta-se à vontade para abrir uma issue ou enviar
-um pull request. | If you find any problems or have any suggestions for improvement, feel free to open an issue or send
-a pull request.
+Se você encontrar algum problema ou tiver alguma sugestão de melhoria, sinta-se à vontade para abrir uma issue ou enviar um pull request. | If you find any problems or have any suggestions for improvement, feel free to open an issue or send a pull request.
 
 ## License | Licença
 
-This project is licensed under the GNU General Public License. See the `LICENSE` file for more details. | Este projeto
-está licenciado sob a Licença GNU General Public License. Veja o arquivo `LICENSE` para mais detalhes.
+This project is licensed under the GNU General Public License. See the `LICENSE` file for more details. | Este projeto está licenciado sob a Licença GNU General Public License. Veja o arquivo `LICENSE` para mais detalhes.

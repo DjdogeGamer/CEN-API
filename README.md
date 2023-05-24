@@ -91,7 +91,7 @@ gcloud app deploy
 
 ## Endpoints
 
-Available endpoints | Endpoints disponíveis:
+### Available endpoints | Endpoints disponíveis:
 
 - `GET /query?sqlQuery=YOUR_SQL_QUERY&fileName=db.sqlite`: Executa uma query no banco de dados e retorna o resultado em um arquivo JSON | Execute a query in the database and return the result in a JSON file.
 
@@ -103,4 +103,4 @@ Se você encontrar algum problema ou tiver alguma sugestão de melhoria, sinta-s
 
 ## License | Licença
 
-This project is licensed under the GNU General Public License. See the `LICENSE` file for more details. | Este projeto está licenciado sob a Licença GNU General Public License. Veja o arquivo `LICENSE` para mais detalhes.
+[General Public License v3.0](https://choosealicense.com/licenses/gpl-3.0/)

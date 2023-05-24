@@ -62,6 +62,30 @@ docker run -d -p 3000:3000 cen-api
 
 3. Acesse a API em `http://localhost:3000`.
 
+## Hospedagem
+
+A API está hospedada no Google Cloud Platform (GCP) e pode ser acessada em https://cryptic-tower-387601.nw.r.appspot.com/.
+
+### Atualização
+
+1. Faça login no GCP:
+
+```bash
+gcloud auth login
+```
+
+2. Faça login no projeto:
+
+```bash
+gcloud config set project cen-api-319618
+```
+
+3. Faça o deploy da API:
+
+```bash
+gcloud app deploy
+```
+
 ## Endpoints
 
 A seguir estão os principais endpoints da API:

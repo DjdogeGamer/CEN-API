@@ -92,7 +92,7 @@ A seguir estão os principais endpoints da API:
 
 - `GET /query?sqlQuery=YOUR_SQL_QUERY&fileName=db.sqlite`: Executa uma consulta SQL no banco de dados e retorna os
   resultados em formato JSON.
-- `POST /asset?fileName=filename.extension`: Faz upload de um arquivo para o servidor.
+- `GET /asset?fileName=filename.extension`: Faz upload de um arquivo para o servidor.
 
 ## Contribuição
 

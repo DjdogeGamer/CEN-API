@@ -1,22 +1,21 @@
-# Use a imagem do ECR
-FROM mcr.microsoft.com/windows/servercore:ltsc2019
+# from base image node
+FROM node:18
 
-# Crie o diretório de trabalho
-WORKDIR /app
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
 
-# Copie o package.json e o package-lock.json (se houver)
+# copying all the files from your file system to container file system
 COPY package.json .
-COPY package-lock.json .
 
-# Instale as dependências
+# install all dependencies
 RUN npm install
 
-# Copie o restante dos arquivos do projeto
-COPY . .
+# copy oter files as well
+COPY ./ .
 
-# Exponha a porta que a aplicação utiliza
+#expose the port
 EXPOSE 3000
 
-# Comando para executar a aplicação
-CMD ["npm", "start"]
+# command to run when intantiate an image
+CMD ["npm","start"]
 

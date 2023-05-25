@@ -17,7 +17,7 @@ axios.get(ENDPOINT, {
 // Asset endpoint
 axios.get(ENDPOINT, {
     params: {
-        fileName: 'menu_bg.jpg'
+        fileName: 'bg.jpg'
     }
 }).then((response) => {
     console.log(response.data);

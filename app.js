@@ -13,7 +13,14 @@ const PORT = process.env.PORT || 3000;
 const S3Util = new S3UtilAPI(bucketName, accessKeyId, secretAccessKey);
 
 app.use((req, res, next) => {
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:8081'); // Substitua o valor pelo seu domínio
+    const allowedOrigins = [
+        'http://localhost:8081', // Substitua pelo domínio local do seu jogo
+        'https://cen-jogo-phaser.nw.r.appspot.com' // Substitua pelo domínio do seu jogo no Google App Engine
+    ];
+    const origin = req.headers.origin;
+    if (allowedOrigins.includes(origin)) {
+        res.setHeader('Access-Control-Allow-Origin', origin);
+    }
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
     res.setHeader('Access-Control-Allow-Credentials', true);

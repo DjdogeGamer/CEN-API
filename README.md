@@ -4,7 +4,7 @@
 
 * https://cen-api.nw.r.appspot.com
 
-## API Arquiteture | Arquitetura da API
+## API Architecture | Arquitetura da API
 
 <div align="center">
   <img src="https://github.com/DjdogeGamer/CEN-API/assets/69666481/7ea4c56c-8caa-4402-84f8-dcda83b5801d">

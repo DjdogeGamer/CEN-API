@@ -6,7 +6,9 @@
 
 ## API Arquiteture | Arquitetura da API
 
-![Diagrama_CEN](https://github.com/DjdogeGamer/CEN-API/assets/69666481/7ea4c56c-8caa-4402-84f8-dcda83b5801d)
+<div align="center">
+  <img src="https://github.com/DjdogeGamer/CEN-API/assets/69666481/7ea4c56c-8caa-4402-84f8-dcda83b5801d">
+</div>
 
 ## Requirements | Requisitos
 

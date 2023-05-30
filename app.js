@@ -5,8 +5,8 @@ const app = express();
 
 const bucketName = 'sqlite-js-ispg-test';
 const fileName = 'db.sqlite';
-const accessKeyId = 'AKIA4ZDOYH5F6H3ASIGQ';
-const secretAccessKey = 'TnR62a1i+ZgeUoIMI+IybspctTrv4AVG8xqo6nKb';
+const accessKeyId = 'your-access-key-id';
+const secretAccessKey = 'your-secret-access-key';
 
 const PORT = process.env.PORT || 3000;
 

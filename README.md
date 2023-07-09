@@ -7,7 +7,7 @@
 ## API Architecture | Arquitetura da API
 
 <div align="center">
-  ![image](https://github.com/DjdogeGamer/CEN-API/assets/69666481/b5d1ef3e-a2dd-4f8e-9f7f-85b30fd32ead)
+  <img src="https://github.com/DjdogeGamer/CEN-API/assets/69666481/0f3dafca-363c-4c5b-baf8-b7b7fe11a4f3">
 </div>
 
 ## Requirements | Requisitos
